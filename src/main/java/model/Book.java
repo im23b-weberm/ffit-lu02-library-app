@@ -1,4 +1,4 @@
-package ch.bzz;
+package model;
 
 public class Book {
         private final int id;
@@ -6,6 +6,8 @@ public class Book {
         private final String title;
         private final String author;
         private final int year;
+
+
 
         public Book(int id, String isbn, String title, String author, int year) {
             this.id = id;
@@ -19,9 +21,29 @@ public class Book {
             return title;
         }
 
-        @Override
+        public String getIsbn() {
+            return isbn;
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        public String getAuthor() {
+            return author;
+        }
+
+        public int getYear() {
+            return year;
+        }
+
+
+    @Override
         public String toString() {
             return "ID: " + id + ", ISBN: " + isbn + ", Title: " + title + ", Author: " + author + ", Year: " + year;
         }
-    }
+
+
+
+}
 
